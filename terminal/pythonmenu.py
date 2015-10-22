@@ -6,7 +6,7 @@ class pythonmenu():
     def __init__(self):
         error = ""
         while True:
-            menu = self.makemenu("")
+            menu = self.makemenu(error)
             os.system("clear")
             print(menu)
             input = raw_input("Please enter an option: ")
