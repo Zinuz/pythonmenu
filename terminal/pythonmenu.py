@@ -6,8 +6,10 @@ class pythonmenu():
     def __init__(self):
         while True:
             menu = self.makemenu("")
+            os.system("clear")
             print(menu)
-            raw_input("")
+            input = raw_input("Please enter an option: ")
+            self.checkinput(input)
 
     def makemenu(self, error):
         temp = ["##",""]
@@ -21,5 +23,12 @@ class pythonmenu():
         if error != "":
             menu += "Error: " + error + "\n"
         return menu
+
+    def checkinput(self, input):
+        x = 0
+        for option in config.menu_options[x]:
+            if input == config.menu_options[x][0]:
+                exec(config.menu_options[x][2])
+            x += 1
 
 pythonmenu()
