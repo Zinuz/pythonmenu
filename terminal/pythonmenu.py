@@ -4,7 +4,6 @@ import os
 
 class pythonmenu():
     def __init__(self):
-        enabled = True
         while True:
             menu = self.makemenu("")
             print(menu)
