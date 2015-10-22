@@ -4,12 +4,14 @@ import os
 
 class pythonmenu():
     def __init__(self):
+        error = ""
         while True:
             menu = self.makemenu("")
             os.system("clear")
             print(menu)
             input = raw_input("Please enter an option: ")
             self.checkinput(input)
+            error = "Invalid Input!"
 
     def makemenu(self, error):
         temp = ["##",""]
