@@ -16,7 +16,7 @@ class pythonmenu():
             temp[0] += "#"
         menu = temp[0] + "\n#" + str(config.application_name) + "#\n" + temp[0] + "\n"
         x = 0
-        for option in config.menu_options:
+        for option in config.menu_options[x]:
             menu += str(config.menu_options[x][0]) + ". " + str(config.menu_options[x][1]) + "\n"
             x += 1
         if error != "":
