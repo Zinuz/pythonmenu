@@ -5,7 +5,7 @@ import os
 class pythonmenu():
     def __init__(self):
         enabled = True
-        while enabled:
+        while True:
             menu = self.makemenu("")
             print(menu)
             raw_input("")
